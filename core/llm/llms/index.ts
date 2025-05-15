@@ -59,6 +59,7 @@ import TextGenWebUI from "./TextGenWebUI";
 import Together from "./Together";
 import Venice from "./Venice";
 import VertexAI from "./VertexAI";
+import VertexAIEnterprise from "./VertexAIEnterprise";
 import Vllm from "./Vllm";
 import Voyage from "./Voyage";
 import WatsonX from "./WatsonX";
@@ -112,6 +113,7 @@ export const LLMClasses = [
   Nebius,
   Venice,
   VertexAI,
+  VertexAIEnterprise,
   xAI,
   SiliconFlow,
   Scaleway,
