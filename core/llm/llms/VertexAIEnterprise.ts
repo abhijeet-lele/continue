@@ -45,9 +45,13 @@ class VertexAIEnterprise extends BaseLLM {
       throw new Error("keyfile_json_path is required but not provided");
     }
     this.keyfile_json_path = _options.keyfile_json_path;
+
+    if (!_options.model) {
+      throw new Error("model is required but not provided");
+    }
     this.model = _options.model;
 
-    if (_options.region !== "us-central1") {
+    if (this.region !== "us-central1") {
       // Any region outside of us-central1 has a max batch size of 5.
       _options.maxEmbeddingBatchSize = Math.min(
         _options.maxEmbeddingBatchSize ?? 5,
@@ -56,7 +60,7 @@ class VertexAIEnterprise extends BaseLLM {
     }
 
 
-    this.vertexProvider = _options.model.includes("gemini")
+    this.vertexProvider = this.model.includes("gemini")
             ? "gemini"
             : "unknown";
    
@@ -165,7 +169,7 @@ class VertexAIEnterprise extends BaseLLM {
     signal: AbortSignal,
     options: CompletionOptions,
   ): AsyncGenerator<ChatMessage> {
-    const isV1API = this.apiBase.includes("/v1/");
+    
 
     // Conditionally apply removeSystemMessage
     const convertedMsgs = this.geminiInstance.removeSystemMessage(messages);
