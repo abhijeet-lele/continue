@@ -57,6 +57,7 @@ const PROVIDER_HANDLES_TEMPLATING: string[] = [
   "mistral",
   "sambanova",
   "vertexai",
+  "vertexai_enterprise",
   "watsonx",
   "nebius",
   "relace",
@@ -76,6 +77,7 @@ const PROVIDER_SUPPORTS_IMAGES: string[] = [
   "venice",
   "sambanova",
   "vertexai",
+  "vertexai_enterprise",
   "azure",
   "scaleway",
   "nebius",
@@ -156,6 +158,7 @@ const PARALLEL_PROVIDERS: string[] = [
   "ovhcloud",
   "nebius",
   "vertexai",
+  "vertexai_enterprise",
   "function-network",
   "scaleway",
 ];

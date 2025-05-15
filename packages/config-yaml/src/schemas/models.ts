@@ -142,6 +142,9 @@ export const modelSchema = z.union([
   z.object({
     ...baseModelFields,
     provider: z.string().refine((val) => val !== "continue-proxy"),
+    region: z.string().optional(),
+    projectId: z.string().optional(),
+    keyfile_json_path: z.string().optional(),
   }),
 ]);
 

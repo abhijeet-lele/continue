@@ -614,6 +614,9 @@ export interface LLMOptions {
   // IBM watsonx Options
   deploymentId?: string;
 
+  // vertexAI Enterprise options
+  keyfile_json_path?: string;
+
   env?: Record<string, string | number | boolean>;
 }
 
@@ -1055,6 +1058,10 @@ export interface ModelDescription {
   capabilities?: ModelCapability;
   roles?: ModelRole[];
   configurationStatus?: LLMConfigurationStatuses;
+
+  projectId?: string;
+  region?: string;
+  keyfile_json_path?: string;
 }
 
 export interface JSONEmbedOptions {
@@ -1327,6 +1334,7 @@ export interface JSONModelDescription {
   aiGatewaySlug?: string;
   useLegacyCompletionsEndpoint?: boolean;
   deploymentId?: string;
+  keyfile_json_path?: string;
 }
 
 // config.json

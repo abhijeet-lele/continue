@@ -78,6 +78,9 @@ export function addModel(
         apiKey: model.apiKey,
         apiBase: model.apiBase,
         defaultCompletionOptions: model.completionOptions,
+        region: model.region,
+        projectId: model.projectId,
+        keyfile_json_path: model.keyfile_json_path
       };
       if (model.systemMessage) {
         desc.chatOptions = {

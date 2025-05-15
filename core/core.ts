@@ -800,6 +800,9 @@ export class Core {
             apiKey: model.apiKey,
             roles: ["autocomplete"],
             apiBase: model.apiBase,
+            projectId: model.projectId,
+            region: model.region,
+            keyfile_json_path: model.keyfile_json_path
           },
         ],
       }),

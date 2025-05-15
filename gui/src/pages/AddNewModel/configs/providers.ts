@@ -873,7 +873,42 @@ To get started, [register](https://dataplatform.cloud.ibm.com/registration/stepo
       ...completionParamsInputsConfigs,
     ],
   },
+  vertexai_enterprise: {
+    title: "VertexAI Enterprise",
+    provider: "vertexai_enterprise",
+    description: "Use supported Vertex AI models",
+    longDescription:
+      "Use the supported Vertex AI models using Landing zone",
+    icon: "vertexai.png",
+    packages: [
+      models.VertexGemini15Pro
+    ],
+    collectInputFor: [
+      {
+        inputType: "project",
+        key: "projectId",
+        label: "Project Id",
+        placeholder: "Enter your Vertex AI project Id",
+        required: true,
+      },
+      {
+        inputType: "region",
+        key: "region",
+        label: "Region",
+        placeholder: "Enter your Vertex AI region",
+        required: true,
+      },
+      {
+        inputType: "keyfile_json_path",
+        key: "keyfile_json_path",
+        label: "Keyfile JSON Path",
+        placeholder: "Enter your Vertex AI keyfile JSON path",
+        required: true,
+      },
 
+      ...completionParamsInputsConfigs,
+    ],
+  },
   askSage: {
     title: "Ask Sage",
     provider: "askSage",
