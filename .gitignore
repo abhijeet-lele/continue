@@ -133,7 +133,7 @@ codeql
 # IntelliJ Plugin
 **/**/.gradle
 **/**/.qodana
-**/**/build
+#**/**/build
 
 continue_server.build
 continue_server.dist
@@ -160,7 +160,7 @@ extensions/intellij/.idea/**
 extensions/intellij/bin
 extensions/.continue-debug/
 
-*.vsix
+#*.vsix
 
 .continuerules
 **/.continue/assistants/
